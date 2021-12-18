@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Blog from "../components/Blog";
 
-const Home = () => {
+const Home = ({blogs}) => {
     return (
         <div className="w-full h-full px-8 py-16 text-gray-900">
             <Head>
@@ -21,13 +21,22 @@ const Home = () => {
             <div className="min-w-full h-px bg-gray-300 mb-9"/>
             
             <div className="w-full pb-12 md:h-3/4 flex flex-col gap-y-12 md:flex-wrap md:gap-y-0">
-                <Blog title="Boost your conversation rate" text="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum cumque dicta error eum fugit id nam necessitatibus nesciunt quos repudiandae. Dolores laboriosam, quasi quod sed soluta tenetur unde veritatis voluptatum!" slug="test" date="18 Dec, 2021"/>
-                <Blog title="Boost your conversation rate" text="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum cumque dicta error eum fugit id nam necessitatibus nesciunt quos repudiandae. Dolores laboriosam, quasi quod sed soluta tenetur unde veritatis voluptatum!" slug="test" date="18 Dec, 2021"/>
-                <Blog title="Boost your conversation rate" text="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum cumque dicta error eum fugit id nam necessitatibus nesciunt quos repudiandae. Dolores laboriosam, quasi quod sed soluta tenetur unde veritatis voluptatum!" slug="test" date="18 Dec, 2021"/>
-                <Blog title="Boost your conversation rate" text="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum cumque dicta error eum fugit id nam necessitatibus nesciunt quos repudiandae. Dolores laboriosam, quasi quod sed soluta tenetur unde veritatis voluptatum!" slug="test" date="18 Dec, 2021"/>
+                {blogs.map(blog => {
+                    return <Blog title={blog.title} text={blog.text} slug={blog.slug} date={blog.date}/>
+                })}
             </div>
         </div>
     )
+}
+
+Home.getInitialProps = async (context) => {
+    let blogs = await fetch("http://localhost:3000/api/blogs")
+
+    blogs = await blogs.json();
+
+    return {
+        blogs: blogs
+    }
 }
 
 export default Home;
