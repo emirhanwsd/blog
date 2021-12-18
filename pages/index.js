@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import Blog from "../components/Blog";
+import ReadableBlog from "../components/ReadableBlog";
 
 const Home = ({blogs}) => {
     return (
@@ -22,7 +22,7 @@ const Home = ({blogs}) => {
             
             <div className="w-full pb-12 md:h-3/4 flex flex-col gap-y-12 md:flex-wrap md:gap-y-0">
                 {blogs.map(blog => {
-                    return <Blog title={blog.title} text={blog.text} slug={blog.slug} date={blog.date}/>
+                    return <ReadableBlog title={blog.title} shortText={blog.shortText} slug={blog.slug} date={blog.date}/>
                 })}
             </div>
         </div>
