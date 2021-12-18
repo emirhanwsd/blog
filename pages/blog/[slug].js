@@ -44,7 +44,7 @@ const BlogPage = ({blog}) => {
 BlogPage.getInitialProps = async (context) => {
     let {slug} = context.query
 
-    let blog = await fetch(`http://localhost:3000/api/blog/${slug}`)
+    let blog = await fetch(`https://blog-emirhanwsd.vercel.app/api/blog/${slug}`)
 
     if (blog.status !== 200) {
         return {

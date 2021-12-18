@@ -1,7 +1,7 @@
 export default async function request(request, result) {
     let { slug } = request.query
 
-    let blogs = await fetch("http://localhost:3000/api/blogs")
+    let blogs = await fetch("https://blog-emirhanwsd.vercel.app/api/blogs")
 
     blogs = await blogs.json();
 

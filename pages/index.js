@@ -30,7 +30,7 @@ const Home = ({blogs}) => {
 }
 
 Home.getInitialProps = async (context) => {
-    let blogs = await fetch("http://localhost:3000/api/blogs")
+    let blogs = await fetch("https://blog-emirhanwsd.vercel.app/api/blogs")
 
     blogs = await blogs.json();
 
