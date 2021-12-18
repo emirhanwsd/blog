@@ -1,7 +1,8 @@
 import Head from "next/head";
 import Link from "next/link";
+import Blog from "../../components/Blog"
 
-const Blog = ({blog}) => {
+const BlogPage = ({blog}) => {
     if (blog === undefined) {
         return (
             <div className="w-full h-full flex flex-col items-center justify-center text-gray-900">
@@ -23,7 +24,7 @@ const Blog = ({blog}) => {
     }
 
     return (
-        <div>
+        <div className="w-full h-full flex flex-col items-center justify-center text-gray-900">
             <Head>
                 <title>{blog.title}</title>
                 <link rel="icon" href="/favicon.ico"/>
@@ -32,11 +33,15 @@ const Blog = ({blog}) => {
                 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
                       rel="stylesheet"/>
             </Head>
+
+            <div className="w-2/4 h-full flex flex-col items-center py-12">
+                <Blog title={blog.title} text={blog.text} date={blog.date}/>
+            </div>
         </div>
     )
 }
 
-Blog.getInitialProps = async (context) => {
+BlogPage.getInitialProps = async (context) => {
     let {slug} = context.query
 
     let blog = await fetch(`http://localhost:3000/api/blog/${slug}`)
@@ -54,4 +59,4 @@ Blog.getInitialProps = async (context) => {
     }
 }
 
-export default Blog;
+export default BlogPage;
