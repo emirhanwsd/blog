@@ -12,7 +12,7 @@ const BlogPage = ({blog}) => {
                 </Head>
 
                 <h3 className="text-5xl font-bold mb-3">Blog not found</h3>
-                <p className="text-xl text-gray-400 mb-6">Please check the URL in the address bar and try again.</p>
+                <p className="text-xl text-gray-400 mb-6 text-center">Please check the URL in the address bar and try again.</p>
 
                 <div className="flex gap-y-3">
                     <Link href="../">
