@@ -20,7 +20,7 @@ const Home = () => {
 
             <div className="min-w-full h-px bg-gray-300 mb-9"/>
             
-            <div className="w-full h-3/4 flex flex-wrap">
+            <div className="w-full md:h-3/4 flex flex-col gap-y-12 md:flex-wrap md:gap-y-0">
                 <Blog title="Boost your conversation rate" text="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum cumque dicta error eum fugit id nam necessitatibus nesciunt quos repudiandae. Dolores laboriosam, quasi quod sed soluta tenetur unde veritatis voluptatum!" slug="test" date="18 Dec, 2021"/>
                 <Blog title="Boost your conversation rate" text="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum cumque dicta error eum fugit id nam necessitatibus nesciunt quos repudiandae. Dolores laboriosam, quasi quod sed soluta tenetur unde veritatis voluptatum!" slug="test" date="18 Dec, 2021"/>
                 <Blog title="Boost your conversation rate" text="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum cumque dicta error eum fugit id nam necessitatibus nesciunt quos repudiandae. Dolores laboriosam, quasi quod sed soluta tenetur unde veritatis voluptatum!" slug="test" date="18 Dec, 2021"/>
