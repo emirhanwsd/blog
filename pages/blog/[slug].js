@@ -34,7 +34,7 @@ const BlogPage = ({blog}) => {
                       rel="stylesheet"/>
             </Head>
 
-            <div className="w-2/4 h-full flex flex-col items-center py-12">
+            <div className="w-3/4 md:w-2/4 h-full flex flex-col items-center py-12">
                 <Blog title={blog.title} text={blog.text} date={blog.date}/>
             </div>
         </div>
