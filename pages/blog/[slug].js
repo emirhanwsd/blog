@@ -35,7 +35,7 @@ const BlogPage = ({blog}) => {
             </Head>
 
             <div className="w-3/4 md:w-2/4 h-full flex flex-col items-center py-12">
-                <Blog title={blog.title} text={blog.text} date={blog.date}/>
+                <Blog title={blog.title} slug={blog.slug} date={blog.date}/>
             </div>
         </div>
     )
