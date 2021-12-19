@@ -15,6 +15,7 @@ npm run dev
 - [React](https://reactjs.org/)
 - [NextJS](https://nextjs.org/)
 - [TailwindCSS](https://tailwindcss.com/)
+- [react-markdown](https://github.com/remarkjs/react-markdown)
 
 # Features
 
@@ -23,8 +24,8 @@ npm run dev
 - [x] Blog not found page
 - [x] Add new blog easily
 - [x] Responsive design
-- [ ] Markdown support
-- [ ] Language support
+- [x] Markdown support
+- [ ] Multi language support
 
 # Preview
 
