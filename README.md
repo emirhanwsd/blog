@@ -15,7 +15,7 @@ npm run dev
 - [React](https://reactjs.org/)
 - [NextJS](https://nextjs.org/)
 - [TailwindCSS](https://tailwindcss.com/)
-- [react-markdown](https://github.com/remarkjs/react-markdown)
+- [Markdown](https://github.com/remarkjs/react-markdown)
 
 # Features
 
