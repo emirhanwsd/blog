@@ -27,7 +27,7 @@ npm run dev
 - [x] Markdown support
 - [ ] Multi language support
 
-## ⚙️ API
+## ⛏️ API
 
 | Method | Request | Response |
 | ------ | ------- | -------- |
