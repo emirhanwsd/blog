@@ -25,7 +25,6 @@ npm run dev
 - [x] Add new blog easily
 - [x] Responsive design
 - [x] Markdown support
-- [ ] Multi language support
 
 ## ⛏️ API
 
