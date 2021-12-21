@@ -1,6 +1,6 @@
 # 📜 Blog
 
-Source codes of my personal blog
+An example blog page
 
 ## 🖥️ Installation
 
